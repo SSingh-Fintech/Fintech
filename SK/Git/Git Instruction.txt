@@ -14,6 +14,15 @@ git checkout -b amend-my-name #Switched to a new branch 'amend-my-name'
 	or
 git checkout -b new-branch existing-branch
 
+# Delete local branch
+$ git branch -d branch-name
+$ git branch -D branch_name
+
+Note: The -d option is an alias for --delete, which only deletes the branch if it has already been fully merged in its upstream branch. You could also use -D, which is an alias for --delete --force, which deletes the branch "irrespective of its merged status." [Source: man git-branch]
+
+# Delete remote branch
+$ git push <remote_name> --delete <branch_name>
+
 #Show all Remote and local branch
 git branch -v
 git remote show origin
